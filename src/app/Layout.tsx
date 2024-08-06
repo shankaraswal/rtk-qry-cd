@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 export const Layout = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full">
-      <div className="flex flex-row gap-5 justify-center py-3  bg-teal-700 text-white w-full">
+      <div className="flex flex-row gap-5 justify-center py-3  bg-red-700 text-white w-full">
         <NavLink
           to="/"
           className={({ isActive }) =>

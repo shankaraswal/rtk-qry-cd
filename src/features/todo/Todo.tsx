@@ -31,7 +31,7 @@ const Todo = () => {
 
   return (
     <div className="rounded-xl py-6 text-black border-neutral-400 p-4 bg-neutral-300">
-      <h1 className="text-xl font-bold  text-teal-700 md:text-4xl dark:text-teal-900  mb-6">
+      <h1 className="text-xl font-bold  text-red-700 mb-6">
         Todo Slice/Reducers
       </h1>
       <form
@@ -46,11 +46,11 @@ const Todo = () => {
           onChange={handleChange}
         />
 
-        <button className="w-60 p-2 mt-4 text-white justify-self-center bg-teal-800 text-2xl">
+        <button className="w-60 p-2 mt-4 text-white justify-self-center bg-red-800 text-2xl">
           Add todo
         </button>
       </form>
-      {error && <p className="text-red-500 text-center m-4 text-xl">{error}</p>}
+      {error && <p className="text-red-700 text-center m-4 text-xl">{error}</p>}
       <div className="mt-4 text-black overflow-auto h-96">
         {todos.map((todo, index) => (
           <div
@@ -60,20 +60,19 @@ const Todo = () => {
             <p>{index + 1}</p>
             <p
               className={`${
-                todo.completed ? "line-through text-red-500" : ""
+                todo.completed ? "line-through text-red-700" : ""
               } `}
             >
               {todo.id}
             </p>
             <p
               className={`${
-                todo.completed ? "line-through text-red-500" : ""
+                todo.completed ? "line-through text-red-700" : ""
               } `}
             >
               {todo.description}
             </p>
             <p>
-              {" "}
               <input
                 type="checkbox"
                 checked={todo.completed}
@@ -90,10 +89,10 @@ const Todo = () => {
             </p>
 
             <p
-              className="text-red-800 font-bold font-sans hover:bg-red-200 cursor-pointer px-2"
+              className="text-red-700 font-bold font-sans hover:bg-red-200 cursor-pointer px-2"
               onClick={() => dispatch(removeTodo(todo.id))}
             >
-              X
+              D
             </p>
           </div>
         ))}

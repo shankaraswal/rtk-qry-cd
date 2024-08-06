@@ -2,9 +2,7 @@ const HomePage = () => {
   return (
     <div>
       <article className="prose lg:prose-xl">
-        <h1 className="text-xl font-bold  text-teal-700 md:text-4xl dark:text-teal-900  mb-6">
-          Home
-        </h1>
+        <h1 className="text-xl font-bold  text-red-700 mb-6">Home</h1>
         <p>
           You can easily customize this template to create a homepage for a
           travel app. The design is simple and clean, with a header that shows a
