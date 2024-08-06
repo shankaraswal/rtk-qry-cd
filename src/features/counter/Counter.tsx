@@ -20,20 +20,23 @@ const Counter = () => {
     dispatch(reset());
   };
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="h-4/5 rounded-xl py-6 w-2/6 text-black border-neutral-400 p-4 bg-neutral-200">
+      <h1 className="text-4xl my-6 text-teal-900 font-semibold underline">
+        Counter Slice/Reducers
+      </h1>
       <div className="flex flex-row">
         <button
           onClick={() => dispatch(decrement())}
-          className="p-5 bg-slate-300 text-2xl "
+          className="px-5 py-2 bg-teal-800 text-white text-4xl"
         >
           -
         </button>
-        <span className="flex-row inline-block text-center border-red-200 border-0 p-4 w-24 text-3xl text-white font-bold">
+        <span className="flex-row inline-block text-center border-red-200 border-0 p-4 w-24 text-3xl text-teal-700 font-bold">
           {counter}
         </span>
         <button
           onClick={() => dispatch(increment())}
-          className="p-5 bg-slate-300 text-2xl"
+          className="px-5 py-2 bg-teal-800 text-white text-4xl "
         >
           +
         </button>
@@ -42,19 +45,19 @@ const Counter = () => {
       <div className="flex flex-row mt-8">
         <button
           onClick={() => dispatch(decrementBy(changeByNumber))}
-          className="p-5 bg-slate-300 text-xl "
+          className="px-5 py-2 bg-teal-800 text-white text-xl"
         >{`DecrementBy =>`}</button>
         <span className="flex-row inline-block">
           <input
             type="number"
             value={changeByNumber}
             onChange={(e) => setChangeByNumber(Number(e.currentTarget.value))}
-            className="p-4 w-24 text-black text-center text-3xl font-bold mx-5"
+            className="p-4 w-24 text-teal-900 text-center text-3xl font-bold mx-5"
           />
         </span>
         <button
           onClick={() => dispatch(incrementBy(changeByNumber))}
-          className="p-5 bg-slate-300 text-xl "
+          className="px-5 py-2 bg-teal-800 text-white text-xl"
         >{`<= IncrementBy`}</button>
       </div>
 
@@ -62,7 +65,7 @@ const Counter = () => {
         <button
           disabled={counter === 0}
           onClick={handleReset}
-          className="p-5 bg-slate-300 text-2xl "
+          className="px-5 py-2 bg-teal-800 text-white text-xl "
         >
           Reset
         </button>

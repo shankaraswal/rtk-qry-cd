@@ -30,7 +30,10 @@ const Todo = () => {
   };
 
   return (
-    <div className="rounded-xl py-6 w-2/6 text-black border-neutral-400 p-4 bg-neutral-200">
+    <div className="h-4/5 rounded-xl py-6 w-2/6 text-black border-neutral-400 p-4 bg-neutral-200">
+      <h1 className="text-4xl my-6 text-teal-900 font-semibold underline">
+        Todo Slice/Reducers
+      </h1>
       <form
         className="w-full items-center justify-center flex flex-col"
         onSubmit={handleAddTodo}

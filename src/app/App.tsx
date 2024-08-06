@@ -4,9 +4,9 @@ import Todo from "../features/todo/Todo";
 function App() {
   return (
     <>
-      <div className="flex h-screen text-white items-center bg-teal-800 justify-center">
+      <div className="flex gap-6 h-screen text-white items-center bg-teal-800 justify-center">
+        <Counter />
         <Todo />
-        {/* <Counter /> */}
       </div>
     </>
   );
