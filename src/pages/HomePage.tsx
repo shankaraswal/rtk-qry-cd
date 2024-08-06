@@ -1,7 +1,7 @@
 const HomePage = () => {
   return (
     <div>
-      <article className="prose lg:prose-xl">
+      <article className="prose">
         <h1 className="text-xl font-bold  text-red-700 mb-6">Home</h1>
         <p>
           You can easily customize this template to create a homepage for a

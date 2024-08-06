@@ -1,7 +1,7 @@
 const PageNotFound = () => {
   return (
     <div>
-      <article className="prose lg:prose-xl">
+      <article className="prose">
         <h1 className="text-xl font-bold  text-red-700 mb-6">Page not found</h1>
         <p className="text-red-500">
           An eye catching design, perfect for companies in the IT sector, gadget

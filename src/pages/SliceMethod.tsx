@@ -3,10 +3,11 @@ import Todo from "../features/todo/Todo";
 
 function SliceMethod() {
   return (
-    <div className="flex flex-col gap-4 justify-center w-full">
+    <>
       <Counter />
+      <hr className="border-separate border-2  my-16 w-full" />
       <Todo />
-    </div>
+    </>
   );
 }
 

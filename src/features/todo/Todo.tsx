@@ -30,7 +30,7 @@ const Todo = () => {
   };
 
   return (
-    <div className="rounded-xl py-6 text-black border-neutral-400 p-4 bg-neutral-300">
+    <div className="w-full text-black">
       <h1 className="text-xl font-bold  text-red-700 mb-6">
         Todo Slice/Reducers
       </h1>

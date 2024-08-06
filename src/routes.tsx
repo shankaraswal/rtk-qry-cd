@@ -5,10 +5,15 @@ import {
 } from "react-router-dom";
 
 import { Layout } from "./app/Layout";
+import HomePage from "./pages/HomePage";
 import SliceMethod from "./pages/SliceMethod";
 import PageNotFound from "./pages/PageNotFound";
-import HomePage from "./pages/HomePage";
-import CreateApi from "./pages/CreateApi";
+
+import UserList from "./pages/UserList";
+import UserDetail from "./pages/UserDetail";
+
+import ProductList from "./pages/ProductList";
+import ProductDetail from "./pages/ProductDetail";
 
 const routeConfig = {
   path: "/",
@@ -24,8 +29,20 @@ const routeConfig = {
       element: <SliceMethod />,
     },
     {
-      path: "/createapi",
-      element: <CreateApi />,
+      path: "/users",
+      element: <UserList />,
+    },
+    {
+      path: "/userdetail/:uid",
+      element: <UserDetail />,
+    },
+    {
+      path: "/products",
+      element: <ProductList />,
+    },
+    {
+      path: "/productdetail/:pid",
+      element: <ProductDetail />,
     },
   ],
 };

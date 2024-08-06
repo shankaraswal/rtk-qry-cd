@@ -21,15 +21,23 @@ export const Layout = () => {
           Slices
         </NavLink>
         <NavLink
-          to="/createapi"
+          to="/users"
           className={({ isActive }) =>
             isActive ? "text-yellow-200 font-bold" : "text-white"
           }
         >
-          CreateApi
+          Users
+        </NavLink>
+        <NavLink
+          to="/products"
+          className={({ isActive }) =>
+            isActive ? "text-yellow-200 font-bold" : "text-white"
+          }
+        >
+          Products
         </NavLink>
       </div>
-      <div className="w-4/6 py-10 flex flex-col items-center justify-center bg-neutral-100 px-10">
+      <div className="w-5/6   max-w-[1440px] py-10 flex flex-col items-center justify-center bg-neutral-100 px-10">
         <Outlet />
       </div>
     </div>
