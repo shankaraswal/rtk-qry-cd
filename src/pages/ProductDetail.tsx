@@ -1,6 +1,6 @@
 import Detail from "../features/products/Detail";
 
-function ProductList() {
+function ProductDetail() {
   return (
     <>
       <div className="flex flex-col gap-4 justify-center w-full">
@@ -10,4 +10,4 @@ function ProductList() {
   );
 }
 
-export default ProductList;
+export default ProductDetail;

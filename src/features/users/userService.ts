@@ -31,8 +31,8 @@ export const userService = createApi({
     getUserList: builder.query<UserType[], void>({
       query: () => `users`,
     }),
-    getUser: builder.query<any, number>({
-      query: (id: number) => `users/${id}`,
+    getUser: builder.query<any, any>({
+      query: (uid: any) => `users/${uid}`,
     }),
   }),
 });

@@ -1,24 +1,19 @@
 import { useNavigate } from "react-router-dom";
 
-// src={`https://tecdn.b-cdn.net/img/new/standard/nature/${imgnum}.jpg`}
-// src={`https://tecdn.b-cdn.net/img/new/slides/${imgnum}.jpg`}
-// src={`https://tecdn.b-cdn.net/img/new/standard/city/${imgnum}.webp`}
-
 const UserCard = ({ imgnum, data }: { imgnum: any; data: any }) => {
   const navigate = useNavigate();
-  if (imgnum >= 0 && imgnum < 10) {
-    imgnum = "10" + imgnum;
+  let imgNum = `10${data.id}`;
+  if (data.id === 10) {
+    imgNum = `1${data.id}`;
   }
   return (
-    <div className="flex flex-row gap-x-12 p-5 rounded-lg bg-white  hover:bg-neutral-300 cursor-pointer">
-      <figure className="w-fit  text-center">
-        <img
-          className="h-40 w-40 rounded-full ring-2 ring-red-400 p-1"
-          src={`https://tecdn.b-cdn.net/img/new/slides/${imgnum}.jpg`}
-          alt=""
-        />
-      </figure>
-      <div className="">
+    <div className="flex flex-row gap-x-12 p-5 rounded-lg bg-white  hover:bg-neutral-300">
+      <img
+        className=" lg:w-40 lg:h-40 md:w-24 md:h-24 rounded-full  ring-2 ring-red-400 p-1"
+        src={`https://tecdn.b-cdn.net/img/new/standard/nature/${imgNum}.jpg`}
+        alt=""
+      />
+      <div className="w-full">
         <h5 className="mb-2 text-xl font-medium text-neutral-800 dark:text-neutral-50 capitalize">
           {`${data.name.firstname} ${data.name.lastname}`}
         </h5>
