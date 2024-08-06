@@ -20,11 +20,11 @@ const Counter = () => {
     dispatch(reset());
   };
   return (
-    <div className="h-4/5 rounded-xl py-6 w-2/6 text-black border-neutral-400 p-4 bg-neutral-200">
-      <h1 className="text-4xl my-6 text-teal-900 font-semibold underline">
+    <div className="rounded-xl py-6 text-black border-neutral-400 p-4 bg-neutral-300">
+      <h1 className="text-xl font-bold  text-teal-700 md:text-4xl dark:text-teal-900  mb-6">
         Counter Slice/Reducers
       </h1>
-      <div className="flex flex-row">
+      <div className="flex flex-row mt-16">
         <button
           onClick={() => dispatch(decrement())}
           className="px-5 py-2 bg-teal-800 text-white text-4xl"

@@ -30,12 +30,12 @@ const Todo = () => {
   };
 
   return (
-    <div className="h-4/5 rounded-xl py-6 w-2/6 text-black border-neutral-400 p-4 bg-neutral-200">
-      <h1 className="text-4xl my-6 text-teal-900 font-semibold underline">
+    <div className="rounded-xl py-6 text-black border-neutral-400 p-4 bg-neutral-300">
+      <h1 className="text-xl font-bold  text-teal-700 md:text-4xl dark:text-teal-900  mb-6">
         Todo Slice/Reducers
       </h1>
       <form
-        className="w-full items-center justify-center flex flex-col"
+        className="w-full items-center mt-16 justify-center flex flex-col"
         onSubmit={handleAddTodo}
       >
         <input
@@ -51,7 +51,7 @@ const Todo = () => {
         </button>
       </form>
       {error && <p className="text-red-500 text-center m-4 text-xl">{error}</p>}
-      <div className="mt-4 text-black overflow-scroll h-96">
+      <div className="mt-4 text-black overflow-auto h-96">
         {todos.map((todo, index) => (
           <div
             key={todo.id}
