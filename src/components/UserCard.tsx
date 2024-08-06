@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const UserCard = ({ imgnum, data }: { imgnum: any; data: any }) => {
+const UserCard = ({ data }: { data: any }) => {
   const navigate = useNavigate();
   let imgNum = `10${data.id}`;
   if (data.id === 10) {
