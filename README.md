@@ -1,6 +1,6 @@
 # React + TypeScript + Vite
 
-- [vercel url](https://vercel.rtk-qry-cd.com)
+## [vercel url ](https://rtk-qry-cd.vercel.app)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
