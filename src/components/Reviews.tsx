@@ -8,7 +8,7 @@ const Reviews = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill="currentColor"
+                fill="#991b1b"
                 className="h-40 w-40"
               >
                 <path
@@ -20,10 +20,10 @@ const Reviews = () => {
             </div>
             <div className="mb-10 ml-6 block w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10">
               <div className="mb-4 flex justify-between">
-                <span className="text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
+                <span className="text-xl transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
                   New Web Design
                 </span>
-                <span className="text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
+                <span className="text-xl transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
                   04 / 02 / 2022
                 </span>
               </div>
@@ -36,7 +36,7 @@ const Reviews = () => {
 
               <button
                 type="button"
-                className="bg-teal-800 py-2 px-6 rounded-lg text-white hover:bg-teal-700"
+                className="bg-red-800 py-2 px-6 rounded-lg text-white hover:bg-red-700"
               >
                 Reply
               </button>
@@ -49,7 +49,7 @@ const Reviews = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill="currentColor"
+                fill="#991b1b"
                 className="h-4 w-4"
               >
                 <path
@@ -61,10 +61,10 @@ const Reviews = () => {
             </div>
             <div className="mb-10 ml-6 block w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10">
               <div className="mb-4 flex justify-between">
-                <span className="text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
+                <span className="text-xl transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
                   21 000 Job Seekers
                 </span>
-                <span className="text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
+                <span className="text-xl transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
                   12 / 01 / 2022
                 </span>
               </div>
@@ -76,7 +76,7 @@ const Reviews = () => {
 
               <button
                 type="button"
-                className="bg-teal-800 py-2 px-6 rounded-lg text-white hover:bg-teal-700"
+                className="bg-red-800 py-2 px-6 rounded-lg text-white hover:bg-red-700"
               >
                 Reply
               </button>
@@ -89,7 +89,7 @@ const Reviews = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                fill="currentColor"
+                fill="#991b1b"
                 className="h-4 w-4"
               >
                 <path
@@ -101,10 +101,10 @@ const Reviews = () => {
             </div>
             <div className="mb-10 ml-6 block w-full rounded-lg bg-neutral-50 p-6 shadow-md shadow-black/5 dark:bg-neutral-700 dark:shadow-black/10">
               <div className="mb-4 flex justify-between">
-                <span className="text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
+                <span className="text-xl transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
                   Awesome Employers
                 </span>
-                <span className="text-info transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
+                <span className="text-xl transition duration-150 ease-in-out hover:text-info-600 focus:text-info-600 active:text-info-700">
                   21 / 12 / 2021
                 </span>
               </div>
@@ -117,7 +117,7 @@ const Reviews = () => {
 
               <button
                 type="button"
-                className="bg-teal-800 py-2 px-6 rounded-lg text-white hover:bg-teal-700"
+                className="bg-red-800 py-2 px-6 rounded-lg text-white hover:bg-red-700"
               >
                 Reply
               </button>

@@ -31,9 +31,9 @@ const Todo = () => {
 
   return (
     <div className="w-full text-black">
-      <h1 className="text-xl font-bold  text-red-700 mb-6">
+      <h3 className="text-xl font-bold  text-red-700 mb-6">
         Todo Slice/Reducers
-      </h1>
+      </h3>
       <form
         className="w-full items-center mt-16 justify-center flex flex-col"
         onSubmit={handleAddTodo}

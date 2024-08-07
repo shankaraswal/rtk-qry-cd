@@ -3,10 +3,12 @@ import counterReducer from "../features/counter/counterSlice";
 import todoReducer from "../features/todo/todoSlice";
 import { userService } from "../features/users/userService";
 import { productService } from "../features/products/productService";
+import { categoryService } from "../features/categories/categoryService";
 
 export const store = configureStore({
   reducer: {
     [userService.reducerPath]: userService.reducer,
+    [categoryService.reducerPath]: categoryService.reducer,
     [productService.reducerPath]: productService.reducer,
     counterState: counterReducer,
     todoState: todoReducer,
@@ -14,7 +16,8 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
       userService.middleware,
-      productService.middleware
+      productService.middleware,
+      categoryService.middleware
     ),
 });
 

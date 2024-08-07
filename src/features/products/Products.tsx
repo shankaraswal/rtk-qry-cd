@@ -1,4 +1,5 @@
 import { ProductCard } from "../../components";
+import CategoryList from "../categories/Categories";
 import { useGetProductListQuery } from "./productService";
 
 const Products = () => {
@@ -10,7 +11,10 @@ const Products = () => {
       {error && <div className="text-red-700">Product list error</div>}
       {data && data.length > 0 && (
         <>
-          <h1 className="text-xl font-bold  text-red-700 mb-6">Product List</h1>
+          <h2 className="font-bold text-3xl text-red-900  mb-6">
+            Product List
+          </h2>
+          <CategoryList />
           <div className="grid grid-cols-3 gap-x-2 gap-y-10">
             {data?.map((item, i) => (
               <ProductCard data={item} key={i} />

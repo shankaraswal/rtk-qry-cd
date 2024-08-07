@@ -22,8 +22,8 @@ export const productService = createApi({
     getProductList: builder.query<ProductType[], void>({
       query: () => `products`,
     }),
-    getProduct: builder.query<any, number>({
-      query: (id: number) => `products/${id}`,
+    getProduct: builder.query<ProductType, string>({
+      query: (pid: string) => `products/${pid}`,
     }),
   }),
 });

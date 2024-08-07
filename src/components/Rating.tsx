@@ -17,7 +17,6 @@ const Rating = ({ prodRating }: any) => {
       const isFilled =
         hoverValue !== null ? hoverValue > index : rating > index;
 
-      console.log(hoverValue);
       const isHalfFilled =
         hoverValue !== null
           ? hoverValue === index + 0.5
@@ -51,10 +50,13 @@ const Rating = ({ prodRating }: any) => {
       data-testid="star-rating-container"
       // onKeyDown={handleKeyDown}
       role="radiogroup"
-      className="flex items-center"
+      className="flex items-center flex-row"
     >
-      {rate} {renderIcons()}
-      <span className="text-sm ml-2">({count} reviews)</span>
+      <span className="text-red-600 mr-2">{rate}</span>
+      {renderIcons()}
+      <span className="ml-6 sm:border-l border-gray-200  pl-6 font-normal leading-7 text-gray-500 text-sm">
+        {count} reviews
+      </span>
     </div>
   );
 };

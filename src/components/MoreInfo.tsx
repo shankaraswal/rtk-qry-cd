@@ -26,13 +26,13 @@ const ItemMoreInfo = () => {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Accordion Item #1
+            <span className="text-2xl text-neutral-700">Accordion Item #1</span>
             <span
               className={`${
                 show.collapse1
                   ? `rotate-[-180deg] -mr-1`
                   : `rotate-0 fill-[#212529]  dark:fill-white`
-              } ml-auto h-5 w-5 shrink-0 fill-[#336dec] transition-transform duration-200 ease-in-out motion-reduce:transition-none dark:fill-blue-300`}
+              } ml-auto h-5 w-5 shrink-0 fill-[#ff0000] transition-transform duration-200 ease-in-out motion-reduce:transition-none dark:fill-blue-300`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,8 @@ const ItemMoreInfo = () => {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Accordion Item #2
+            {" "}
+            <span className="text-2xl text-neutral-700">Accordion Item #2</span>
             <span
               className={`${
                 show.collapse2
@@ -132,7 +133,8 @@ const ItemMoreInfo = () => {
             aria-expanded="true"
             aria-controls="collapseOne"
           >
-            Accordion Item #3
+            {" "}
+            <span className="text-2xl text-neutral-700">Accordion Item #3</span>
             <span
               className={`${
                 show.collapse3

@@ -21,9 +21,9 @@ const Counter = () => {
   };
   return (
     <div className="w-full text-black">
-      <h1 className="text-xl font-bold  text-red-700 mb-6">
+      <h3 className="text-xl font-bold  text-red-700 mb-6">
         Counter Slice/Reducers
-      </h1>
+      </h3>
       <div className="flex flex-row mt-16">
         <button
           onClick={() => dispatch(decrement())}

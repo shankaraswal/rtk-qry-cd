@@ -5,7 +5,7 @@ import { useGetUserQuery } from "./userService";
 function Detail() {
   const navigate = useNavigate();
   const { uid } = useParams();
-  const { data, error, isLoading } = useGetUserQuery(uid);
+  const { data, error, isLoading } = useGetUserQuery(uid!);
   let imgNum = `10${data?.id}`;
   if (data?.id === 10) {
     imgNum = `1${data?.id}`;
@@ -28,13 +28,13 @@ function Detail() {
               }}
             ></div>
             <div className="text-2xl w-full">
-              <h2 className="text-6xl text-red-900 mb-6 font-semibold capitalize">
+              <h2 className="text-3xl text-red-900 mb-6 font-semibold capitalize">
                 {data.name.firstname} {data.name.lastname}
               </h2>
               <p className="text-lg text-neutral-500">
                 Username: {data.username}
               </p>
-              <h3 className="mt-10 mb-4 text-3xl font-semibold">
+              <h3 className="mt-10 mb-4 text-2xl font-semibold">
                 Contact Information
               </h3>
               <div className="space-y-6 text-xl">
@@ -52,7 +52,7 @@ function Detail() {
             </div>
           </div>
           <div className="mb-4">
-            <h3 className="mt-10 mb-4 text-3xl font-semibold">About</h3>
+            <h3 className="mt-10 mb-4 text-2xl font-semibold">About</h3>
             <div className="mt-2 text-xl">
               <p>
                 John is a seasoned software engineer with over 10 years of
@@ -86,7 +86,7 @@ function Detail() {
                 him a valuable asset to any team.
               </p>
             </div>
-            <h3 className="mt-10 mb-4 text-3xl font-semibold">Location</h3>
+            <h3 className="mt-10 mb-4 text-2xl font-semibold">Location</h3>
             <Geolocation coords={data.address.geolocation} />
           </div>
           <div className="my-4">

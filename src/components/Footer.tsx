@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="text-center">
+    <footer className="text-center w-full border border-gray-200">
       <div className=" bg-neutral-100 h-full">
-        <div className="w-[1440px] mx-auto">
-          <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+        <div className="w-full mx-auto">
+          <div className="items-center justify-center  border-b border-gray-200 p-4 lg:justify-between">
             <div className="mr-12 hidden lg:block">
               <span>Get connected with us on social networks:</span>
             </div>
@@ -212,7 +212,7 @@ const Footer = () => {
       </div>
 
       {/* <!--Copyright section--> */}
-      <div className="bg-neutral-500 p-6 text-center text-neutral-300 ">
+      <div className="bg-neutral-300 p-6 text-center text-neutral-400 ">
         <div className="w-[1440px] mx-auto">
           <span>© 2023 Copyright: </span>
           <a
