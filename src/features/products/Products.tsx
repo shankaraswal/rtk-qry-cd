@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProductCard } from "../../components";
 import ProductCategories from "./ProductCategories";
@@ -9,7 +8,6 @@ import {
 } from "./productService";
 
 const Products = () => {
-  const [listData, setListData] = useState<any>([]);
   const { cat } = useParams();
   const {
     data: productList,
