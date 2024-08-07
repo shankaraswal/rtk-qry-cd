@@ -14,7 +14,6 @@ import UserDetail from "./pages/UserDetail";
 
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
-import CategoryList from "./features/categories/Categories";
 
 const routeConfig = {
   path: "/",

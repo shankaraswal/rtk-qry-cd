@@ -1,9 +1,8 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useGetProductQuery } from "./productService";
 import { MoreInfo, Rating, Reviews } from "../../components";
 
 const ProductDetail = () => {
-  const navigate = useNavigate();
   const { pid } = useParams();
   const { data, error, isLoading } = useGetProductQuery(pid!);
   console.log(data);
