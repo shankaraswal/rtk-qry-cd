@@ -41,6 +41,10 @@ const routeConfig = {
       element: <ProductList />,
     },
     {
+      path: "/products/category/:cat",
+      element: <ProductList />,
+    },
+    {
       path: "/productdetail/:pid",
       element: <ProductDetail />,
     },

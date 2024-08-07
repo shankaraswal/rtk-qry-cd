@@ -1,9 +1,30 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { ProductCard } from "../../components";
-import CategoryList from "../categories/Categories";
-import { useGetProductListQuery } from "./productService";
+import ProductCategories from "./ProductCategories";
+import {
+  ProductType,
+  useGetProductByCategoryQuery,
+  useGetProductListQuery,
+} from "./productService";
 
 const Products = () => {
-  const { data, error, isLoading } = useGetProductListQuery();
+  const [listData, setListData] = useState<any>([]);
+  const { cat } = useParams();
+  const {
+    data: productList,
+    error: listError,
+    isLoading: listIsLoading,
+  } = useGetProductListQuery();
+  const {
+    data: categoryList,
+    error: catError,
+    isLoading: catIsLoading,
+  } = useGetProductByCategoryQuery(cat!, { skip: !cat });
+
+  const data = cat ? categoryList : productList;
+  const error = cat ? catError : listError;
+  const isLoading = cat ? catIsLoading : listIsLoading;
 
   return (
     <>
@@ -14,9 +35,9 @@ const Products = () => {
           <h2 className="font-bold text-3xl text-red-900  mb-6">
             Product List
           </h2>
-          <CategoryList />
+          <ProductCategories />
           <div className="grid grid-cols-3 gap-x-2 gap-y-10">
-            {data?.map((item, i) => (
+            {data?.map((item: ProductType, i: number) => (
               <ProductCard data={item} key={i} />
             ))}
           </div>
