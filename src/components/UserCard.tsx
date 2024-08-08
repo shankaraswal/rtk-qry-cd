@@ -8,7 +8,7 @@ const UserCard = ({ data }: { data: UserType }) => {
     imgNum = `1${data.id}`;
   }
   return (
-    <div className="flex flex-row gap-x-12 p-5 rounded-lg bg-white  hover:bg-neutral-300">
+    <div className="flex flex-row gap-x-12 p-5 rounded-lg bg-white transition-all duration-300  hover:bg-neutral-300">
       <img
         className=" lg:w-40 lg:h-40 md:w-24 md:h-24 rounded-full  ring-2 ring-red-400 p-1"
         src={`https://tecdn.b-cdn.net/img/new/standard/nature/${imgNum}.jpg`}

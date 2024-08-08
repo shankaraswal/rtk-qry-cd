@@ -34,7 +34,7 @@ const Products = () => {
             Product List
           </h2>
           <ProductCategories />
-          <div className="grid grid-cols-3 gap-x-2 gap-y-10">
+          <div className="grid grid-cols-3 gap-x-2 gap-y-2 mt-2">
             {data?.map((item: ProductType, i: number) => (
               <ProductCard data={item} key={i} />
             ))}

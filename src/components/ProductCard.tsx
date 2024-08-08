@@ -14,7 +14,7 @@ const ProductCard = ({ data }: { data: ProductType }) => {
   };
 
   return (
-    <div className="block border-2 border-neutral-300 p-4">
+    <div className="block border-2 border-neutral-300 p-4 bg-white  transition-all duration-300 hover:bg-neutral-300">
       <h3 className="mb-2 w-full text-lg font-bold text-neutral-900  text-ellipsis line-clamp-1">
         {data.title}
       </h3>
