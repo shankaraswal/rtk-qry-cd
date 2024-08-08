@@ -1,13 +1,18 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../app/store";
 import { ProductType } from "../features/products/productService";
+import { removeItem } from "../features/cart/cartActions";
 
 const Cart = () => {
+  const dispatch = useDispatch();
   const { items } = useSelector((state: RootState) => state.cart);
   const cartSubTotal = items.reduce(
     (acc: number, item: ProductType) => acc + item.qty! * item.price,
     0
   );
+  const handleRemoveItem = (id: string) => {
+    dispatch(removeItem(id));
+  };
   return (
     <section className="bg-neutral-100">
       <div className="border-2 border-neutral-300">
@@ -46,6 +51,7 @@ const Cart = () => {
                         <div className="flex">
                           <button
                             type="button"
+                            onClick={() => handleRemoveItem(item.id)}
                             className="font-medium text-red-600 hover:text-red-500"
                           >
                             Remove
@@ -87,9 +93,9 @@ const Cart = () => {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M19 12H5m14 0-4 4m4-4-4-4"
                       ></path>
                     </svg>

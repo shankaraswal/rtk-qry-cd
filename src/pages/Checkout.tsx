@@ -1,8 +1,11 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../app/store";
 import { ProductType } from "../features/products/productService";
+import { removeItem } from "../features/cart/cartActions";
 
 const Checkout = () => {
+  const dispatch = useDispatch();
+
   const { items } = useSelector((state: RootState) => state.cart);
   const cartSubTotal = items.reduce(
     (acc: number, item: ProductType) => acc + item.qty! * item.price,
@@ -40,6 +43,10 @@ const Checkout = () => {
     taxableAmt:
       cartSubTotal - cartSubTotal * ((cartSubTotal > 2000 ? 20 : 10) / 100),
   });
+
+  const handleRemoveItem = (id: string | number) => {
+    dispatch(removeItem(id));
+  };
 
   return (
     <>
@@ -85,6 +92,7 @@ const Checkout = () => {
                         <div className="flex">
                           <button
                             type="button"
+                            onClick={() => handleRemoveItem(item.id)}
                             className="font-medium text-red-600 hover:text-red-500"
                           >
                             Remove

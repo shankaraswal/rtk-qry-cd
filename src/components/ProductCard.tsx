@@ -2,15 +2,15 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { ProductType } from "../features/products/productService";
 import Rating from "../components/Rating.js";
-import { addItem } from "../features/cart/cartSlice";
+import { addItem } from "../features/cart/cartActions";
 
 const ProductCard = ({ data }: { data: ProductType }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleAddItem = () => {
-    const item = { ...data, qty: 1 };
-    dispatch(addItem(item));
+    const itemWithQuantity = Object.assign({ ...data, qty: 1 });
+    dispatch(addItem(itemWithQuantity));
   };
 
   return (
@@ -47,7 +47,7 @@ const ProductCard = ({ data }: { data: ProductType }) => {
             Detail
           </button>
           <button
-            onClick={() => handleAddItem()}
+            onClick={handleAddItem}
             type="button"
             className="bg-red-800 text-white py-2 px-8 rounded hover:bg-red-600 "
           >

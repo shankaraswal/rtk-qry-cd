@@ -11,7 +11,7 @@ export type ProductType = {
     rate: number;
     count: number;
   };
-  qty?: number;
+  qty: number;
 };
 
 export const productService = createApi({

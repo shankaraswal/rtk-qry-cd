@@ -1,25 +1,29 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { loadCart, addItem, removeItem } from "./cartActions";
+import { addItem, removeItem } from "./cartActions";
+import { ProductType } from "../products/productService";
 
-const initialState = {
+export interface CartState {
+  items: ProductType[];
+}
+
+const initialState: CartState = {
   items: [],
-  status: "idle",
 };
 
 const cartReducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(loadCart, (state, action) => {
-      state.items = action.payload;
-      state.status = "loaded";
-    })
     .addCase(addItem, (state, action) => {
-      state.items.push(action.payload);
-      state.status = "loaded";
+      const existingItem = state.items.find(
+        (item) => item.id === action.payload.id
+      );
+      if (existingItem) {
+        existingItem.qty += 1;
+      } else {
+        state.items.push({ ...action.payload, qty: 1 });
+      }
     })
     .addCase(removeItem, (state, action) => {
-      state.items = state.items.filter(
-        (item) => item.productId !== action.payload.productId
-      );
+      state.items = state.items.filter((item) => item.id !== action.payload);
     });
 });
 
