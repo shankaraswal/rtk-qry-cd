@@ -1,6 +1,9 @@
 import { useState } from "react";
-
-const Rating = ({ prodRating }: any) => {
+export type ProductRating = {
+  count: number;
+  rate: number;
+};
+const Rating = ({ prodRating }: { prodRating: ProductRating }) => {
   const { count, rate } = prodRating;
   const [rating] = useState(rate);
   const [hoverValue] = useState(rate);

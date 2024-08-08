@@ -33,7 +33,7 @@ const ProductCategories = () => {
                 key={item}
                 onClick={() => handleCategoryClick(item)}
                 disabled={activeCategory === item}
-                className={`capitalize text-md p-2 w-48 text-white hover:bg-neutral-700 disabled:bg-red-800 ${
+                className={`capitalize text-md p-2 text-white hover:bg-neutral-700 disabled:bg-red-800 ${
                   activeCategory === item ? "bg-neutral-400" : "bg-neutral-600"
                 }`}
               >
@@ -43,7 +43,7 @@ const ProductCategories = () => {
             <button
               onClick={() => handleCategoryClick()}
               disabled={activeCategory === ""}
-              className={`capitalize text-md p-2 w-48 text-white hover:bg-neutral-700 disabled:bg-red-800 ${
+              className={`capitalize text-md p-2 text-white hover:bg-neutral-700 disabled:bg-red-800 ${
                 !activeCategory ? "bg-neutral-400" : "bg-neutral-600"
               }`}
             >

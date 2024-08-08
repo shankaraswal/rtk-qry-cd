@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-type UserType = {
+export type UserType = {
   address: {
     geolocation: {
       lat: string;

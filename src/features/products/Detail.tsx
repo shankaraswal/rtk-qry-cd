@@ -5,7 +5,6 @@ import { MoreInfo, Rating, Reviews } from "../../components";
 const ProductDetail = () => {
   const { pid } = useParams();
   const { data, error, isLoading } = useGetProductQuery(pid!);
-  console.log(data);
 
   return (
     <>

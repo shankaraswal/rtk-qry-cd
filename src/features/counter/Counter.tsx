@@ -15,7 +15,6 @@ const Counter = () => {
   const [changeByNumber, setChangeByNumber] = useState<number>(0);
 
   const handleReset = () => {
-    console.log(changeByNumber);
     setChangeByNumber(0);
     dispatch(reset());
   };

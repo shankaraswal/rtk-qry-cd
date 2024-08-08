@@ -14,6 +14,7 @@ import UserDetail from "./pages/UserDetail";
 
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
+import Checkout from "./pages/Checkout";
 
 const routeConfig = {
   path: "/",
@@ -23,7 +24,6 @@ const routeConfig = {
       path: "/",
       element: <HomePage />,
     },
-    ,
     {
       path: "/slices",
       element: <SliceMethod />,
@@ -47,6 +47,10 @@ const routeConfig = {
     {
       path: "/productdetail/:pid",
       element: <ProductDetail />,
+    },
+    {
+      path: "/cart",
+      element: <Checkout />,
     },
   ],
 };

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
+import { UserType } from "../features/users/userService";
 
-const UserCard = ({ data }: { data: any }) => {
+const UserCard = ({ data }: { data: UserType }) => {
   const navigate = useNavigate();
   let imgNum = `10${data.id}`;
   if (data.id === 10) {
