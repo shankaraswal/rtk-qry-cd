@@ -10,7 +10,7 @@ const Cart = () => {
     (acc: number, item: ProductType) => acc + item.qty! * item.price,
     0
   );
-  const handleRemoveItem = (id: string) => {
+  const handleRemoveItem = (id: string | number) => {
     dispatch(removeItem(id));
   };
   return (
