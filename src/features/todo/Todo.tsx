@@ -55,7 +55,7 @@ const Todo = () => {
         {todos.map((todo, index) => (
           <div
             key={todo.id}
-            className="flex flex-row py-2 space-x-10 items-start justify-between border-b-2 border-white"
+            className="flex flex-row  py-2 space-x-10  border-b-2 "
           >
             <p>{index + 1}</p>
             <p

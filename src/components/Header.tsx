@@ -26,6 +26,14 @@ function Header() {
           Slices
         </NavLink>
         <NavLink
+          to="/kite"
+          className={({ isActive }) =>
+            isActive ? "text-yellow-200 font-bold" : "text-white"
+          }
+        >
+          Kite
+        </NavLink>
+        <NavLink
           to="/users"
           className={({ isActive }) =>
             isActive ? "text-yellow-200 font-bold" : "text-white"

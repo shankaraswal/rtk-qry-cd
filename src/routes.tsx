@@ -15,6 +15,7 @@ import UserDetail from "./pages/UserDetail";
 import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import Checkout from "./pages/Checkout";
+import KiteCaculator from "./pages/Kite";
 
 const routeConfig = {
   path: "/",
@@ -28,6 +29,11 @@ const routeConfig = {
       path: "/slices",
       element: <SliceMethod />,
     },
+    {
+      path: "/kite",
+      element: <KiteCaculator />,
+    },
+
     {
       path: "/users",
       element: <UserList />,
