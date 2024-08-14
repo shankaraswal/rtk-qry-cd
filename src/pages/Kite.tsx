@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 const KiteCalculator = () => {
-  const [start, setStart] = useState(10);
-  const [end, setEnd] = useState(100);
+  const [start, setStart] = useState(1000);
+  const [end, setEnd] = useState(3500);
   const [targetSum, setTargetSum] = useState(8);
   const [givenNumber, setGivenNumber] = useState(50);
   const [minDifference, setMinDifference] = useState(5);
-  const [price, setPrice] = useState(1); // Added state for price
+  const [price, setPrice] = useState<number>(1); // Added state for price
   const [results, setResults] = useState<any>([]);
 
   const findNumbersWithDigitSum = (
@@ -40,7 +40,7 @@ const KiteCalculator = () => {
       .map((number) => ({
         number: number,
         difference: number - givenNumber,
-        totalAmount: price * (number - start + 1), // Calculate total amount
+        totalAmount: price * (number - givenNumber), // Calculate total amount
       }))
       .filter((result) => result.difference > minDifference);
 
@@ -66,7 +66,10 @@ const KiteCalculator = () => {
       <div className="flex flex-row gap-10 w-full">
         <div className="bg-white p-6 rounded shadow-md w-1/3 space-y-6 font-bold">
           <div>
-            <label className="block text-gray-700">Start Range:</label>
+            <label className="block text-gray-700">
+              {" "}
+              Min Stocks (can purchase):
+            </label>
             <input
               type="number"
               className="w-full mt-1 p-2 border border-gray-300 rounded"
@@ -75,7 +78,9 @@ const KiteCalculator = () => {
             />
           </div>
           <div>
-            <label className="block text-gray-700">End Range:</label>
+            <label className="block text-gray-700">
+              Max Stocks (can purchase):
+            </label>
             <input
               type="number"
               className="w-full mt-1 p-2 border border-gray-300 rounded"
@@ -84,7 +89,7 @@ const KiteCalculator = () => {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Target Digit Sum:</label>
+            <label className="block text-gray-700">Digit Sum:</label>
             <input
               type="number"
               className="w-full mt-1 p-2 border border-gray-300 rounded"
@@ -93,7 +98,7 @@ const KiteCalculator = () => {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Given Number:</label>
+            <label className="block text-gray-700">Existing Stocks:</label>
             <input
               type="number"
               className="w-full mt-1 p-2 border border-gray-300 rounded"
@@ -102,7 +107,7 @@ const KiteCalculator = () => {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Minimum Difference:</label>
+            <label className="block text-gray-700">{`Buying Quantity > or =:`}</label>
             <input
               type="number"
               className="w-full mt-1 p-2 border border-gray-300 rounded"
@@ -111,7 +116,7 @@ const KiteCalculator = () => {
             />
           </div>
           <div>
-            <label className="block text-gray-700">Price per Item:</label>
+            <label className="block text-gray-700">LTP per Stock:</label>
             <input
               type="number"
               className="w-full mt-1 p-2 border border-gray-300 rounded"
