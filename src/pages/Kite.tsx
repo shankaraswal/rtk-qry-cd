@@ -132,37 +132,32 @@ const KiteCalculator = () => {
           </button>
         </div>
 
-        {results.length > 0 && (
-          <div className="bg-white p-6 rounded shadow-md w-2/3  space-y-3">
-            <h2 className="text-xl font-semibold mb-2">Results:</h2>
-            <div className="flex flex-col gap-5 ">
+        <div className="flex flex-col gap-4 w-2/3 text-enter">
+          <table className="table-custom">
+            <thead>
+              <tr>
+                <th>Current</th>
+                <th>Targeted </th>
+                <th>Need</th>
+                <th>LTP</th>
+                <th className="text-right">Required Amd</th>
+              </tr>
+            </thead>
+            <tbody>
               {results.map((result: any, index: number) => (
-                <p
-                  key={index}
-                  className="flex flex-row text-ls justify-between border-b border-black py-3"
-                >
-                  <span>current stock:</span>
-                  <span className="text-lg font-bold text-teal-700">
-                    {givenNumber}
-                  </span>
-                  <span>buy:</span>
-                  <span className="text-lg font-bold text-red-700">
-                    {result.difference}
-                  </span>
-                  <span>total stock:</span>
-                  <span className="text-lg font-bold text-teal-700">
-                    {result.number}
-                  </span>
-
-                  <span>require:</span>
-                  <span className="text-lg font-bold text-red-700">
+                <tr>
+                  <td>{givenNumber}</td>
+                  <td>{result.number}</td>
+                  <td className="text-green-600">{result.difference}</td>
+                  <td className="text-orange-400">{price.toFixed(2)}</td>
+                  <td className="text-right font-semibold text-xl text-red-600 tracking-wider">
                     ₹ {result.totalAmount.toFixed(2)}
-                  </span>
-                </p>
+                  </td>
+                </tr>
               ))}
-            </div>
-          </div>
-        )}
+            </tbody>
+          </table>
+        </div>
       </div>
     </>
   );

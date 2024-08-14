@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* styles.css */
+.table-custom {
+    @apply w-full text-center text-lg border-spacing-0 border-collapse border-none;
+  }
+
+  .table-custom tr:hover {
+    @apply bg-red-100;
+  }
+  
+  .table-custom th, .table-custom td {
+    @apply px-4 py-2 border-b border-gray-300;
+   
+  }
+  
+  .table-custom th {
+    @apply bg-gray-200 font-medium;
+  }
+  
