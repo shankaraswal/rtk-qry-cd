@@ -144,7 +144,7 @@ const KiteCalculator = () => {
               </tr>
             </thead>
             <tbody>
-              {results.map((result: any, index: number) => (
+              {results.map((result: any) => (
                 <tr>
                   <td>{givenNumber}</td>
                   <td>{result.number}</td>
